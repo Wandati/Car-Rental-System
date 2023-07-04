@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins" , sans-serif;
+    box-sizing: border-box;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.logo{
+    color: #fff;
+    font-size: 30px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body{
+    background-image: url(https://pikwizard.com/pw/medium/faf465c046d7602a1879051627994ec5.avif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+.Display{
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.CarInfo img{
+    /* width:100%;
+    height: auto; */
+    width: 250px;
+    height: 150px;
+    padding: 5px;
+
+}
+
+h1{
+   
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.Hire{
+    width: 300px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: grey;
+    color: #fff;
+}

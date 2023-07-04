@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://pikwizard.com/pw/medium/faf465c046d7602a1879051627994ec5.avif);
+    font-family: "Poppins", sans-serif;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    
+}
+.register{
+    width: 350px;
+    height: 450px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    
+}
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+form{
+    width: 300px;
+    margin-left: 20px;
+
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 20px;
+}
+form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.btn{
+    width: 300px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: chocolate;
+    color: #fff;
+}
+.btn a{
+    text-decoration: none;
+    color: #fff;
+}
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.Details a{
+    color: chocolate;
+
+}
+.Terms a{
+    color: chocolate;
+}
