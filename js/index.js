@@ -13,8 +13,9 @@ function GetCars(){
 function DisplayCars(cars){
     const CarDetails = document.querySelector(".Display")
     for(let car of cars){
-         let CarDetail = document.createElement("div")
-         CarDetail.setAttribute("class","CarInfo")
+        let CarDetail = document.createElement("div")
+        CarDetail.setAttribute("class","CarInfo")
+        // CarDetail.id = cars.id
         CarDetail.innerHTML = `
         <img src ="${car.image}">
         <h2>${car.name}</h2>
@@ -39,8 +40,10 @@ function DisplayCars(cars){
                     let ans1 = ans.toUpperCase()
                     if(ans1 === 'Y'){
                         alert('Thankyou for your purchase.Your Payment will be processed Shortly.Enjoy Your Ride!')
-                        car.Availability -= 1;
-                        CarDetail.querySelector("#CarDetail").textContent = `Available Cars : ${car.Availability}`
+                        let Availability = car.Availability
+                        Availability -= 1;
+                        CarDetail.querySelector("#CarDetail").textContent = `Available Cars : ${Availability}`
+                        UpdateAvailability(car.id,Availability)
                     }else if(ans1 === 'N'){
                         alert("Thank you for Your Time.See you soon.")
                     }else{
@@ -49,31 +52,28 @@ function DisplayCars(cars){
                 }else{
                     alert("Days Cannot be less than 0!!")
                 }
-                
-                //let AvailableCars = 
-                // const HiringPrice = (Hire * Price)
-                // let ans = prompt(`Your Hiring price is ${HiringPrice} Kshs. Do You Wish to Proceed? YES/NO`)
-                // if(ans === "YES".toLowerCase()){
-                //     alert('Thankyou for your purchase.Your Payment will be processed Shortly.Enjoy Your Ride!')
-                //     car.Availability -= 1;
-                //     CarDetail.querySelector("#CarDetail").textContent = `Available Cars : ${car.Availability}`
-
-                // }else if(ans === "NO".toLowerCase()){
-                //     alert("Thank you for Your Time.See you soon.")
-
-                // }else{
-                //     alert("Please enter a Valid Input!!!")
-                // }
 
             }else{
                 alert("Oops!The Selected Car is not Available at the moment.")
             }
+
         })
         CarDetails.appendChild(CarDetail)
 
     }
 }
-
+function UpdateAvailability(id,Availability){
+    fetch(`http://localhost:3000/cars/${id}`,{
+        method : "PATCH",
+        headers : {
+            "Content-Type" : "application/json",
+        },
+        body : JSON.stringify({Availability : Availability})
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
+}
 document.querySelector("#btn-btn").addEventListener("click",()=>{
     document.querySelector(".modal").style.display = "flex";
 });
@@ -81,10 +81,7 @@ document.querySelector(".close").addEventListener("click",()=>{
     document.querySelector(".modal").style.display = "none";
 });
 let addCar  = document.querySelector("#AddCars")
-// console.log(addCar)
-// function hello(){
-//     console.log("i was clicked!")
-// }
+
 addCar.addEventListener("submit",(e)=>{
     e.preventDefault()
     const formdata = new FormData(addCar)
