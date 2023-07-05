@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     
     GetCars()
 })
+//function to fetch db.json data and convert it to js data
 function GetCars(){
 
     return fetch("http://localhost:3000/cars")
@@ -10,12 +11,13 @@ function GetCars(){
 
 }
 //GetCars();
+//function that displays the car details in our website
 function DisplayCars(cars){
     const CarDetails = document.querySelector(".Display")
     for(let car of cars){
         let CarDetail = document.createElement("div")
         CarDetail.setAttribute("class","CarInfo")
-        // CarDetail.id = cars.id
+        
         CarDetail.innerHTML = `
         <img src ="${car.image}">
         <h2>${car.name}</h2>
@@ -26,13 +28,14 @@ function DisplayCars(cars){
         <button class ="Hire"> Hire Now </button>
         `
         let HireBtn = CarDetail.querySelector(".Hire")
-        
+       //Event listener for the Hire button  
         HireBtn.addEventListener("click",(e)=>{
             e.preventDefault()
+            //Check if there the selected Car is available to be hired
             if(car.Availability > 0){
                 let Price = car.HirePrice
-                
                 let HireDays = prompt("Enter The Number of Days you Wish To Hire: ")
+            //Conditional statent to make sure Numbe of days are greater than 0
                 if(HireDays > 0){
                     let Hire = parseInt(HireDays)
                     const HiringPrice = (Hire * Price)
@@ -58,10 +61,12 @@ function DisplayCars(cars){
             }
 
         })
+        //Adding our child Element to it's Parent 
         CarDetails.appendChild(CarDetail)
 
     }
 }
+//Function to update availability in our database
 function UpdateAvailability(id,Availability){
     fetch(`http://localhost:3000/cars/${id}`,{
         method : "PATCH",
@@ -74,6 +79,7 @@ function UpdateAvailability(id,Availability){
     .then(data => console.log(data))
     .catch(error => console.log(error))
 }
+//Expressions for the Modal form
 document.querySelector("#btn-btn").addEventListener("click",()=>{
     document.querySelector(".modal").style.display = "flex";
 });
@@ -85,11 +91,12 @@ document.querySelector(".AddCars").addEventListener("click",()=>{
 });
 
 let addCar  = document.querySelector("#AddCars")
-
+//Event Listener for the Add Cars button
 addCar.addEventListener("submit",(e)=>{
      e.preventDefault()
     const formdata = new FormData(addCar)
     const data = Object.fromEntries(formdata)
+    //Posting our new car data to the db.json file
     fetch("http://localhost:3000/cars",{
         method : 'POST',
         headers : {
