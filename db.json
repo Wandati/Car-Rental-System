@@ -1,139 +1,172 @@
-{"cars": [
+{
+  "cars": [
     {
       "id": 1,
       "name": "Toyota",
-      "make":"Corolla",
-      "YearOfManufacture":"2016",
-      "HirePrice":"3500",
+      "make": "Corolla",
+      "YearOfManufacture": "2016",
+      "HirePrice": "3500",
       "image": "https://www.pngmart.com/files/1/Toyota-Transparent-PNG.png ",
       "Availability": 15
     },
     {
       "id": 2,
       "name": "Mercedes Benz",
-      "make":"C63AMG",
-      "YearOfManufacture":"2015",
-      "HirePrice":"5000",
+      "make": "C63AMG",
+      "YearOfManufacture": "2015",
+      "HirePrice": "5000",
       "image": "https://www.pngmart.com/files/2/Mercedes-PNG-File.png",
       "Availability": 5
     },
     {
-        "id": 3,
-        "name": "Jaguar",
-        "make":"Corolla",
-      "YearOfManufacture":"2014",
-      "HirePrice":"4500",
-        "image": "https://www.pngmart.com/files/3/Jaguar-F-TYPE-Transparent-PNG.png",
-        "Availability": 6
+      "id": 3,
+      "name": "Jaguar",
+      "make": "F-TYPE",
+      "YearOfManufacture": "2014",
+      "HirePrice": "4500",
+      "image": "https://www.pngmart.com/files/3/Jaguar-F-TYPE-Transparent-PNG.png",
+      "Availability": 6
     },
     {
-        "id": 4,
-        "name": "Range Rover",
-        "make":"Sport",
-      "YearOfManufacture":"2012",
-      "HirePrice":"7000",
-        "image": "https://www.pngmart.com/files/4/Land-Rover-Range-Rover-Sport-PNG-Transparent.png",
-        "Availability": 8
+      "id": 4,
+      "name": "Range Rover",
+      "make": "Sport",
+      "YearOfManufacture": "2012",
+      "HirePrice": "7000",
+      "image": "https://www.pngmart.com/files/4/Land-Rover-Range-Rover-Sport-PNG-Transparent.png",
+      "Availability": 8
     },
     {
-        "id": 5,
-        "name": "VolksWagen",
-        "make":"Beetle",
-      "YearOfManufacture":"1990",
-      "HirePrice":"5500",
-        "image": "https://www.pngmart.com/files/9/VW-Beetle-PNG-Pic.png",
-        "Availability": 15
+      "id": 5,
+      "name": "VolksWagen",
+      "make": "Beetle",
+      "YearOfManufacture": "1990",
+      "HirePrice": "5500",
+      "image": "https://www.pngmart.com/files/9/VW-Beetle-PNG-Pic.png",
+      "Availability": 15
     },
     {
-        "id": 6,
-        "name": "BMW",
-        "make":"M3Competition",
-      "YearOfManufacture":"2018",
-      "HirePrice":"6500",
-        "image": "https://www.pngmart.com/files/3/BMW-M3-PNG-Clipart.png",
-        "Availability": 5
+      "id": 6,
+      "name": "BMW",
+      "make": "M3Competition",
+      "YearOfManufacture": "2018",
+      "HirePrice": "6500",
+      "image": "https://www.pngmart.com/files/3/BMW-M3-PNG-Clipart.png",
+      "Availability": 5
     },
     {
-        "id": 7,
-        "name": "Subaru",
-        "make":"Forester",
-      "YearOfManufacture":"2007",
-      "HirePrice":"2500",
-        "image": "https://www.pngmart.com/files/9/Blue-Subaru-PNG-HD-420x279.png",
-        "Availability": 20
+      "id": 7,
+      "name": "Subaru",
+      "make": "Forester",
+      "YearOfManufacture": "2007",
+      "HirePrice": "2500",
+      "image": "https://www.pngmart.com/files/9/Blue-Subaru-PNG-HD-420x279.png",
+      "Availability": 20
     },
     {
-        "id": 8,
-        "name": "Nissan",
-        "make":"Qashqai",
-      "YearOfManufacture":"2019",
-      "HirePrice":"5500",
-        "image": "https://www.pngmart.com/files/3/Nissan-PNG-HD.png",
-        "Availability": 14
+      "id": 8,
+      "name": "Nissan",
+      "make": "Qashqai",
+      "YearOfManufacture": "2019",
+      "HirePrice": "5500",
+      "image": "https://www.pngmart.com/files/3/Nissan-PNG-HD.png",
+      "Availability": 14
     },
     {
-        "id": 9,
-        "name": "Ford",
-        "make":"Fiesta",
-      "YearOfManufacture":"2013",
-      "HirePrice":"4000",
-        "image": "https://www.pngmart.com/files/9/Ford-PNG-Clipart.png",
-        "Availability": 5
+      "id": 9,
+      "name": "Ford",
+      "make": "Fiesta",
+      "YearOfManufacture": "2013",
+      "HirePrice": "4000",
+      "image": "https://www.pngmart.com/files/9/Ford-PNG-Clipart.png",
+      "Availability": 5
     },
     {
-        "id": 10,
-        "name": "Fiat",
-        "make":"Panda",
-      "YearOfManufacture":"2000",
-      "HirePrice":"3500",
-        "image": "https://www.pngmart.com/files/5/Fiat-Tuning-PNG-HD.png",
-        "Availability": 8
+      "id": 10,
+      "name": "Fiat",
+      "make": "Panda",
+      "YearOfManufacture": "2000",
+      "HirePrice": "3500",
+      "image": "https://www.pngmart.com/files/5/Fiat-Tuning-PNG-HD.png",
+      "Availability": 8
     },
     {
-        "id": 11,
-        "name": "mitsubishi",
-        "make":"Evo",
-      "YearOfManufacture":"2008",
-      "HirePrice":"4000",
-        "image": "https://www.pngmart.com/files/22/Mitsubishi-Evolution-PNG-Clipart.png",
-        "Availability": 24
+      "id": 11,
+      "name": "mitsubishi",
+      "make": "Evo",
+      "YearOfManufacture": "2008",
+      "HirePrice": "4000",
+      "image": "https://www.pngmart.com/files/22/Mitsubishi-Evolution-PNG-Clipart.png",
+      "Availability": 24
     },
     {
-        "id": 12,
-        "name": "Renault",
-        "make":"Commodore",
-      "YearOfManufacture":"2016",
-      "HirePrice":"3500",
-        "image": "https://www.pngmart.com/files/10/Renault-Download-PNG-Image.png",
-        "Availability": 4
+      "id": 12,
+      "name": "Renault",
+      "make": "Commodore",
+      "YearOfManufacture": "2016",
+      "HirePrice": "3500",
+      "image": "https://www.pngmart.com/files/10/Renault-Download-PNG-Image.png",
+      "Availability": 4
     },
     {
-        "id": 13,
-        "name": "LandRover",
-        "make":"Defender",
-      "YearOfManufacture":"2007",
-      "HirePrice":"5000",
-        "image": "https://www.pngmart.com/files/22/Land-Rover-Defender-PNG-HD.png",
-        "Availability": 10
+      "id": 13,
+      "name": "LandRover",
+      "make": "Defender",
+      "YearOfManufacture": "2007",
+      "HirePrice": "5000",
+      "image": "https://www.pngmart.com/files/22/Land-Rover-Defender-PNG-HD.png",
+      "Availability": 10
     },
     {
-        "id": 14,
-        "name": "Isuzu",
-        "make":"D-MAX",
-      "YearOfManufacture":"2013",
-      "HirePrice":"3500",
-        "image": "https://www.pngmart.com/files/22/Isuzu-Background-Isolated-PNG.png",
-        "Availability": 20
+      "id": 14,
+      "name": "Isuzu",
+      "make": "D-MAX",
+      "YearOfManufacture": "2013",
+      "HirePrice": "3500",
+      "image": "https://www.pngmart.com/files/22/Isuzu-Background-Isolated-PNG.png",
+      "Availability": 20
     },
     {
-        "id": 15,
-        "name": "Kia",
-        "make":"Ceed",
-      "YearOfManufacture":"2019",
-      "HirePrice":"4500",
-        "image": "https://www.pngmart.com/files/10/Red-Kia-Car-PNG-Pic.png",
-        "Availability": 5
+      "id": 15,
+      "name": "Kia",
+      "make": "Ceed",
+      "YearOfManufacture": "2019",
+      "HirePrice": "4500",
+      "image": "https://www.pngmart.com/files/10/Red-Kia-Car-PNG-Pic.png",
+      "Availability": 5
     }
-
+   
+  ],
+  "Users": [
+    {
+      "Username": "Hanks",
+      "EmailAdress": "Hanks@gmail.com",
+      "Password": "12345",
+      "id": 16
+    },
+    {
+      "Username": "Admin",
+      "EmailAdress": "Admin@gmail.com",
+      "Password": "Admin907",
+      "id": 17
+    },
+    {
+      "Username": "Yumbet",
+      "EmailAdress": "Yumbet@gmail.com",
+      "Password": "Yumbet43",
+      "id": 18
+    },
+    {
+      "Username": "Bond",
+      "EmailAdress": "Bond@gmail.com",
+      "Password": "Bond007",
+      "id": 21
+    },
+    {
+      "Username": "user ",
+      "EmailAdress": "user@gmail.com",
+      "Password": "user1234",
+      "id": 22
+    }
   ]
 }
