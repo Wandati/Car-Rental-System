@@ -51,6 +51,7 @@ form input{
     margin-top: 20px;
     background-color: chocolate;
     color: #fff;
+    cursor: pointer;
 }
 .btn a{
     text-decoration: none;
