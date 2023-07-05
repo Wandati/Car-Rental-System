@@ -166,6 +166,18 @@
       "EmailAdress": "user@gmail.com",
       "Password": "user1234",
       "id": 22
+    },
+    {
+      "Username": "user2",
+      "EmailAdress": "user@gmail.com",
+      "Password": "user23456",
+      "id": 23
+    },
+    {
+      "Username": "ben",
+      "EmailAdress": "ben@gmail.com",
+      "Password": "beeeeen",
+      "id": 24
     }
   ]
 }
