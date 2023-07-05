@@ -80,10 +80,14 @@ document.querySelector("#btn-btn").addEventListener("click",()=>{
 document.querySelector(".close").addEventListener("click",()=>{
     document.querySelector(".modal").style.display = "none";
 });
+document.querySelector(".AddCars").addEventListener("click",()=>{
+    document.querySelector(".modal").style.display = "none";
+});
+
 let addCar  = document.querySelector("#AddCars")
 
 addCar.addEventListener("submit",(e)=>{
-    e.preventDefault()
+     e.preventDefault()
     const formdata = new FormData(addCar)
     const data = Object.fromEntries(formdata)
     fetch("http://localhost:3000/cars",{
