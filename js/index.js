@@ -20,7 +20,7 @@ function DisplayCars(cars){
         <h2>${car.name}</h2>
         <h3>${car.make}</h3>
         <h3>Year Of Manufacture : ${car.YearOfManufacture}</h3>
-        <h3> <span id ="Price"> Price : ${car.HirePrice} Kshs</span></h3>
+        <h3> <span id ="Price"> Price Per Day : ${car.HirePrice} Kshs</span></h3>
         <h3> <span id ="CarDetail"> Available Cars : ${car.Availability}</span></h3>
         <button class ="Hire"> Hire Now </button>
         `
@@ -73,3 +73,31 @@ function DisplayCars(cars){
 
     }
 }
+
+document.querySelector("#btn-btn").addEventListener("click",()=>{
+    document.querySelector(".modal").style.display = "flex";
+});
+document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".modal").style.display = "none";
+});
+let addCar  = document.querySelector("#AddCars")
+// console.log(addCar)
+// function hello(){
+//     console.log("i was clicked!")
+// }
+addCar.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    const formdata = new FormData(addCar)
+    const data = Object.fromEntries(formdata)
+    fetch("http://localhost:3000/cars",{
+        method : 'POST',
+        headers : {
+            'Content-Type' : 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json)
+    .then(data =>console.log(data))
+    .catch(error => console.log(error))
+    
+});
