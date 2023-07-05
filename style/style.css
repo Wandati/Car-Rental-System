@@ -49,8 +49,7 @@ body{
 }
 
 .CarInfo img{
-    /* width:100%;
-    height: auto; */
+    
     width: 250px;
     height: 150px;
     padding: 5px;
@@ -62,12 +61,53 @@ h1{
     text-align: center;
     color: #fff;
     padding: 20px;
+    margin-top: 10px;
 }
 
 .Hire{
-    width: 300px;
+    width: 250px;
     height: 30px;
     margin-top: 20px;
     background-color: grey;
     color: #fff;
+}
+h3{
+    color: #fff;
+}
+.data{
+    text-align: center;
+}
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    display: none;
+    /* align-items: center; */
+}
+.modal-content{
+    width: 500px;
+    height: 300px;
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+input{
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 35px;
+    transform:rotate(45deg);
+    cursor: pointer;
 }
