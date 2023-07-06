@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded",()=>{
+// document.addEventListener("DOMContentLoaded",()=>{
     
-    GetCars()
-})
+//     GetCars()
+// })
+document.addEventListener("DOMContentLoaded",GetCars)
 //function to fetch db.json data and convert it to js data
 function GetCars(){
 
@@ -38,10 +39,18 @@ function DisplayCars(cars){
             //Conditional statent to make sure Numbe of days are greater than 0
                 if(HireDays > 0){
                     let Hire = parseInt(HireDays)
+                    
                     const HiringPrice = (Hire * Price)
                     let ans = prompt(`Your Hiring price is ${HiringPrice} Kshs. Do You Wish to Proceed? Reply with Y for Yes or N for No`)
                     let ans1 = ans.toUpperCase()
                     if(ans1 === 'Y'){
+                        const data = {
+                            car: car.name,
+                            days : Hire,
+                            id : car.id
+                           
+                        }
+                        UpdateData(data)
                         alert('Thankyou for your purchase.Your Payment will be processed Shortly.Enjoy Your Ride!')
                         let Availability = car.Availability
                         Availability -= 1;
@@ -78,6 +87,24 @@ function UpdateAvailability(id,Availability){
     .then(res => res.json())
     .then(data => console.log(data))
     .catch(error => console.log(error))
+}
+//function to Post Hire days and Car hired
+function UpdateData(data){
+    // const data = {
+    //     days : Hire,
+    //     id : car.id
+    // }
+    fetch(`http://localhost:3000/data`,{
+        method : `POST`,
+        headers : {
+            'Content-Type' : 'application/json'
+        },
+        body : JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
+
 }
 //Expressions for the Modal form
 document.querySelector("#btn-btn").addEventListener("click",()=>{
