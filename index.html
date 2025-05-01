@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Car Rental System</title>
-  </head>
-  <body>
-    <div class="header">
-      <nav id="Top">
-        <h2 class="logo">CARENTAL</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Car Rentals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Premium Car Rentals</div>
         <ul>
-          <li><a href="#Intro">Home</a></li>
-          <li><a href="#About">About Us</a></li>
-          <li><a href="#Contact">Contact us</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Signup</a></li>
-          <li><a href="#" id="btn-btn">Add A Car</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <!-- <button type="button">Add A Car</button> -->
-      </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="auth-button login-btn">Login</a>
+            <a href="signup.html" class="auth-button signup-btn">Sign Up</a>
+        </div>
+    </nav>
+
+    <div id="home" class="container">
+        <h1>Luxury Cars for Hire</h1>
+        <button id="btn-btn">Add New Car</button>
+        <div class="Display">
+            <!-- Car data will be displayed here -->
+            <div class="error-message">
+                <h3>Loading car data...</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="container section">
+        <h2>About Us</h2>
+        <p>Premium Car Rentals is a luxury car rental service dedicated to providing exceptional vehicles and superior customer service. Founded in 2015, we have grown to become a leader in the luxury car rental industry.</p>
+        <p>Our fleet consists of the latest models from prestigious brands, all maintained to the highest standards to ensure your driving experience is nothing short of perfect.</p>
+        <p>Whether you need a car for a business trip, a special occasion, or simply to indulge yourself, we have the perfect vehicle for you.</p>
+    </div>
+
+    <div id="services" class="container section">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>Luxury Car Rentals</h3>
+                <p>Experience the thrill of driving premium vehicles with our extensive collection of luxury cars available for daily, weekly, or monthly rentals.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👨‍✈️</div>
+                <h3>Chauffeur Services</h3>
+                <p>Let our professional drivers take care of your transportation needs with our premium chauffeur services for events, business meetings, or airport transfers.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏁</div>
+                <h3>Track Day Experiences</h3>
+                <p>Take a high-performance vehicle to the track with our exclusive track day experiences. Push the limits in a controlled environment.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container section">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Our Location</h3>
+                <p>123 Luxury Drive</p>
+                <p>Central Business District</p>
+                <p>Nairobi, Kenya</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Phone & Email</h3>
+                <p>+254 700 000 000</p>
+                <p>info@premiumcarrentals.com</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">⏰</div>
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 8am - 8pm</p>
+                <p>Saturday: 9am - 6pm</p>
+                <p>Sunday: 10am - 4pm</p>
+            </div>
+        </div>
     </div>
 
     <div class="modal">
-      <div class="modal-content">
-        <div class="close">+</div>
-        <form action="#" id="AddCars">
-          <input type="text" name="name" id="" placeholder="CarName" />
-          <input type="text" name="make" id="" placeholder="CarMake" />
-          <input
-            type="text"
-            name="YearOfManufacture"
-            id=""
-            placeholder="YearOfManufacture"
-          />
-          <input type="text" name="HirePrice" id="" placeholder="HiringPrice" />
-          <input type="text" name="image" id="" placeholder="ImageSource" />
-          <input
-            type="text"
-            name="Availability"
-            id=""
-            placeholder="AvailableCars"
-          />
-          <button type="submit" class="AddCars">Submit</button>
-        </form>
-      </div>
+        <div class="modal-content">
+            <span class="close">+</span>
+            <h2>Add New Car</h2>
+            <form id="AddCars">
+                <input type="text" name="name" placeholder="Enter Car Name" required>
+                <input type="text" name="make" placeholder="Enter Car Make" required>
+                <input type="number" name="YearOfManufacture" placeholder="Year of Manufacture" required>
+                <input type="number" name="HirePrice" placeholder="Hire Price per Day" required>
+                <input type="number" name="Availability" placeholder="Number of Available Cars" required>
+                <input type="text" name="image" placeholder="Image URL" required>
+                <button class="Hire AddCars" type="submit">Add Car</button>
+            </form>
+        </div>
     </div>
 
-    <h1 id="Intro">Welcome to Our Car Rental System <br />Hire With Us Now!</h1>
-
-    <div class="Display">
-      <!-- Displaying my database Details here -->
-    </div>
-
-    <h1 id="About">ABOUT US</h1>
-    <p class="data">
-      We offer a varied fleet of cars, ranging from the compact Toyotas to
-      luxury cars like VW and Mercedes.<br />
-      All our vehicles have air conditioning, power steering, electric windows.
-      All our vehicles are bought and maintained at official dealerships
-      only.<br />
-      Automatic transmission cars are available in every booking class. We pride
-      ourselves on personalized service, great cars and excellent rates.<br />We
-      pride ourselves on personalized service, great cars and excellent rates.
-    </p>
-    <h1 id="Contact">CONTACT US</h1>
-    <p class="data">
-      You can reach us out through 0700123456 or email us at CarRental@gmail.com
-    </p>
-    <footer class="data">
-      <span>&copy; Copyright 2023 </span>
+    <footer class="footer">
+        <p>&copy; 2025 Premium Car Rentals. All rights reserved.</p>
     </footer>
-    <h1 id="Top-Menu"><a href="#Top">Back To Top</a></h1>
 
     <script src="js/index.js"></script>
-  </body>
+</body>
 </html>
